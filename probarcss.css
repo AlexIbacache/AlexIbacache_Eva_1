@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    
+    width: 90%;
+    margin: 1em auto;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(5, 1fr);
+}
+.container > .header,
+.container >.tarjetas,
+.container >.destacados,
+.container >.footer,
+.container >.article,
+.container >.div{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+.encabezadoBusqueda {
+    
+    width: 100%;
+    
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+.barra-superior {
+    background: #8a26e1;
+    background: linear-gradient(90deg, #8a26e1 2%, #e32e9f 36%, #e32e9f 67%, #fe3e31 98%);
+    height: 40px;
+    padding: 8px 0px;
+    position: relative;
+}
+
+.container>.tarjetas {
+    grid-column: span 4;
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.articleimg{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+.article{
+    padding: 20px;
+}
+.articletexto{
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.textoarticle {
+    grid-column: span 4;
+}
+.iconotextarticle{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    
+}
+
+.container>.destacados {
+    grid-column: span 1;
+
+}
+.ajustarimagen {
+    max-width: 100%; 
+    height: auto; 
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation label {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.navigation label:last-child {
+    margin-right: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .slide {
+    opacity: 1;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 300px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.titulodestacados{ 
+    color: #8a26e1;
+    text-align: center;
+    padding: 20px;
+}
+.busqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.busqueda>button {
+    background-color: #fe3e31;
+    width: 20px;
+    height: 20px;
+}
